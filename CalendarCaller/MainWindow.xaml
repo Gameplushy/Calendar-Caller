@@ -19,25 +19,25 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Label Content="Month :"/>
             <ComboBox Name="cbMonth">
-                <ComboBoxItem IsSelected="true">January</ComboBoxItem>
-                <ComboBoxItem>February</ComboBoxItem>
-                <ComboBoxItem>March</ComboBoxItem>
-                <ComboBoxItem>April</ComboBoxItem>
-                <ComboBoxItem>May</ComboBoxItem>
-                <ComboBoxItem>June</ComboBoxItem>
-                <ComboBoxItem>July</ComboBoxItem>
-                <ComboBoxItem>August</ComboBoxItem>
-                <ComboBoxItem>September</ComboBoxItem>
-                <ComboBoxItem>October</ComboBoxItem>
-                <ComboBoxItem>November</ComboBoxItem>
-                <ComboBoxItem>December</ComboBoxItem>
+                <ComboBoxItem IsSelected="true" Tag="1">January</ComboBoxItem>
+                <ComboBoxItem Tag="2">February</ComboBoxItem>
+                <ComboBoxItem Tag="3">March</ComboBoxItem>
+                <ComboBoxItem Tag="4">April</ComboBoxItem>
+                <ComboBoxItem Tag="5">May</ComboBoxItem>
+                <ComboBoxItem Tag="6">June</ComboBoxItem>
+                <ComboBoxItem Tag="7">July</ComboBoxItem>
+                <ComboBoxItem Tag="8">August</ComboBoxItem>
+                <ComboBoxItem Tag="9">September</ComboBoxItem>
+                <ComboBoxItem Tag="10">October</ComboBoxItem>
+                <ComboBoxItem Tag="11">November</ComboBoxItem>
+                <ComboBoxItem Tag="12">December</ComboBoxItem>
             </ComboBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Label Content="Year :"/>
             <TextBox Width="100" Name="tbYear"/>
         </StackPanel>
-        <Button Content="Call API" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Name="btnSubmit"/>
-        <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Name="tbRes"/>
+        <Button Content="Call API" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Name="btnSubmit" Click="btnSubmit_Click"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Name="tbRes" FontFamily="Courier New"/>
     </Grid>
 </Window>
