@@ -7,4 +7,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="TP1WS">
+      <HintPath>..\..\TP1WS\TP1WS\bin\Debug\net7.0\TP1WS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
