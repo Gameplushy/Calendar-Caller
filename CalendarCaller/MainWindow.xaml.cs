@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace CalendarCaller
@@ -13,9 +14,14 @@ namespace CalendarCaller
             InitializeComponent();
         }
 
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        private void btnSubmitClassic_Click(object sender, RoutedEventArgs e)
         {
             tbRes.Text = TP1WS.Calendar.CreateCalendar(((ComboBoxItem)cbMonth.SelectedItem).Tag + "/" + tbYear.Text) ;
+        }
+
+        private void btnSubmitWithEvents_Click(object sender, RoutedEventArgs e)
+        {
+            tbRes.Text = TP1WS.Calendar.CreateCalendarWithSpecialDates(((ComboBoxItem)cbMonth.SelectedItem).Tag + "/" + tbYear.Text, tbEvents.Text.Split(",").ToList());
         }
     }
 }
