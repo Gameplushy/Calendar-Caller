@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CalendarCaller
 {
@@ -23,6 +12,16 @@ namespace CalendarCaller
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnSubmitClassic_Click(object sender, RoutedEventArgs e)
+        {
+            tbRes.Text = TP1WS.Calendar.CreateCalendar(((ComboBoxItem)cbMonth.SelectedItem).Tag + "/" + tbYear.Text) ;
+        }
+
+        private void btnSubmitWithEvents_Click(object sender, RoutedEventArgs e)
+        {
+            tbRes.Text = TP1WS.Calendar.CreateCalendarWithSpecialDates(((ComboBoxItem)cbMonth.SelectedItem).Tag + "/" + tbYear.Text, tbEvents.Text.Split(",").ToList());
         }
     }
 }
